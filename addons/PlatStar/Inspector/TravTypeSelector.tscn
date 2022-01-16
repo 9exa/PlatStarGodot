@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="TravTypeSelector" type="OptionButton"]
+margin_right = 176.0
+margin_bottom = 20.0
+text = "WALK"
+items = [ "WALK", null, false, 0, null, "JUMP", null, false, 1, null, "FALL", null, false, 2, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}

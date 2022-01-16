@@ -1,0 +1,23 @@
+AT LEAST MAKE SURE FUCKING QUERYING WORKS
+
+
+
+I think imma take a break from this for now
+
+Add support for edges with interval extremes, like when jumping to and from a
+non-solid platform
+Support for snapping the extremes of nodes to connect them,
+this would require a  automatically creating WALK edges between them
+Should WALK edges be treated differently? (i.e uneditable)
+Removing nulls in edges when saving, as they would be redundant. edges are kept
+as Godot::Array/vector<Edge*> for fast access and removal.
+I'm considering adding 'ind' property to edge dictionary, which is why I haven't
+implemented getting rid of nulls yet.
+While we're at it, why not get rid of nulls in the surfaces array too?
+Saving doesn't happen every frame like querying does, so it may be the ideal time for
+refractoring.
+Refactor() should be local to PlatGraph.cpp
+Also need to start calling emit_changed there
+
+
+General cleanup - everything is a mess
